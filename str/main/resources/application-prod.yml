@@ -1,0 +1,50 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.0.112/xuniji2characterEncoding=utf-8&useSSL=false
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 192.168.0.112
+    port: 6379
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+##  path: /var/log/tomcat/
+#  file: /var/log/tomcat/sell.log
+#  level:
+#    com.imooc.LoggerTest: debug
+
+wechat:
+  mpAppId: xxxxxxxxxxxxxxxxxxxxxxxxx
+  mpAppSecret: xxxxxxxxxxxxxxxxxxxxxxxxx
+  openAppId: xxxxxxxxxxxxxxxxxxxxxxxxx
+  openAppSecret: xxxxxxxxxxxxxxxxxxxxxxxxx
+  mchId: xxxxxxxxxxxxxxxxxxxxxxxxx
+  mchKey: xxxxxxxxxxxxxxxxxxxxxxxxx
+  keyPath: /var/xxxxxxxxxxxxxxxxxxxxxxxxx/h5.p12
+  notifyUrl: http://sell.xxxxxxxxxxxxxxxxxxxxxxxxx/sell/pay/notify
+  templateId:
+    orderStatus: e-xxxxxxxxxxxxxxxxxxxxxxxxx-yeQ
+
+projectUrl:
+  wechatMpAuthorize: xxxxxxxxxxxxxxxxxxxxxxxxx
+  wechatOpenAuthorize: xxxxxxxxxxxxxxxxxxxxxxxxx
+  sell: xxxxxxxxxxxxxxxxxxxxxxxxx
+logging:
+  level:
+    com.imooc.dataobject.mapper: trace
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+# 又拍云服务 见 https://console.upyun.com/services/file/
+upyun:
+  bucketName: XXX
+  userName: xxx
+  password: xxxx
+  imageHost: http://xxx.com/
+server:
+  servlet:
+    context-path: /sell
